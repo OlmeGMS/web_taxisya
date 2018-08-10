@@ -1,6 +1,4 @@
-Thanks for downloading this theme!
-
-Theme Name: eBusiness
-Theme URL: https://bootstrapmade.com/ebusiness-bootstrap-corporate-template/
-Author: BootstrapMade.com
-Author URL: https://bootstrapmade.com
+Theme Name: taxisya
+Theme URL: https://taxisya.co
+Author: taxisya
+Author URL: https://taxisya.co

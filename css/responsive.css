@@ -2,6 +2,7 @@
   .work-right-text {
     padding: 150px 150px;
   }
+
 }
 
 /* Normal desktop :992px. */
@@ -114,6 +115,7 @@
   .search-option input {
     width: 67%;
   }
+
 }
 
 /* small mobile :320px. */
@@ -274,6 +276,7 @@
 /* Large Mobile :480px. */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+
   .submitbtn {
     float: none;
     width: 99.8%;
