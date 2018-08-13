@@ -1,5 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <title>Taxis Ya</title>
@@ -13,6 +14,7 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+
 
   <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -38,6 +40,7 @@
 
   <!-- Responsive Stylesheet File -->
   <link href="css/responsive.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 
@@ -67,7 +70,7 @@
                   <h1 id="fh5co-logo"><a href="index.html"><img src="img/taxisya.png" alt="taxisya"style="width: 160px;"></a></h1>
                   <!-- Uncomment below if you prefer to use an image logo -->
                   <!-- <img src="img/logo.png" alt="" title=""> -->
-								</a>
+                </a>
               </div>
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
@@ -79,13 +82,13 @@
                     <a class="page-scroll" href="#about">Nosotros</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="#services">Servicios</a>
+                    <a class="page-scroll" href="#fh5co-tours">Servicios</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="#team">Tramites</a>
+                    <a class="page-scroll" href="#team">Apps</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="#portfolio">Clientes</a>
+                    <a class="page-scroll" href="#clients">Clientes</a>
                   </li>
                   <li>
                     <a class="page-scroll" href="#contact">Contacto</a>
@@ -255,7 +258,111 @@
     </div>
   </div>
   <!-- End About area -->
+  <!--service taxi online-->
+  <div class="fh5co-hero">
+    <div class="fh5co-overlay"></div>
+    <div class="fh5co-cover" data-stellar-background-ratio="0.5" style="background-image: url(img/background/taxi_aeropuerto3.png);">
+      <div class="desc">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-5 col-md-5">
+              <div class="tabulation animate-box">
 
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active">
+                    <a href="#flights" aria-controls="flights" role="tab" data-toggle="tab"><i class="fa fa-cab"></i> Servicio de taxi</a>
+                  </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active" id="flights">
+                    <div class="row">
+                      <form class="form-class" method="post" onsubmit="return false">
+                        <div class="col-xxs-12 col-xs-6 mt">
+                          <div class="input-field">
+                            <label for="from">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Pedro" />
+                          </div>
+                        </div>
+                        <div class="col-xxs-12 col-xs-6 mt">
+                          <div class="input-field">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Perez" />
+                          </div>
+                        </div>
+                        <br>
+                        <div class="col-xxs-12 col-xs-6 mt alternate" style=" margin-top: 7px;">
+                          <div class="input-field">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Digita tú correo electrónico" />
+                          </div>
+                        </div>
+                        <div class="col-xxs-12 col-xs-6 mt alternate" style=" margin-top: 7px;">
+                          <div class="input-field">
+                            <label for="telefono">Teléfono</label>
+                            <input type="number" class="form-control" id="telefono" name="telefono" placeholder="Digita tú número de teléfono" />
+                          </div>
+                        </div>
+                        <div class="col-xxs-12 col-xs-6 mt alternate" style=" margin-top: 7px;">
+                          <div class="input-field">
+                            <label class="col-md-6 control-label" for="dir">Dirección</label>
+                            <select class="form-control" name="dir" id="dir">
+                                <option value="" selecteddisabled>Seleccione la dirección</option>
+                                <option value="Calle">Calle</option>
+                                <option value="Carrera">Carrera</option>
+                                <option value="Diagonal">Diagonal</option>
+                                <option value="Transversal">Transversal</option>
+                                <option value="Autopista">Autopista</option>
+                                <option value="Avenida">Avenida</option>
+                                <option value="Avenida Calle">Avenida Calle</option>
+                                <option value="Avenida Carrera">Avenida Carrera</option>
+                                <option value="Circunvalar">Circunvalar</option>
+                                <option value="Troncal">Troncal</option>
+                                <option value="Variante">Variante</option>
+                                </select>
+                          </div>
+                        </div>
+                        <div class="col-xxs-12 col-xs-6 mt alternate" style=" margin-top: 7px;">
+                          <div class="input-field">
+                            <label for="num-dir"></label>
+                            <input type="text" class="form-control" id="num-dir" name="num-dir" placeholder="Digite el # de la dir" required style=" margin-top: 5px;" />
+                          </div>
+                        </div>
+                        <div class="col-xs-12" style=" margin-top: 44px;">
+                          <input type="submit" class="btn btn-primary btn-block" id="btn-enviar-solicitud" name="" value="Solicitar taxi">
+                        </div>
+                    </div>
+
+                    </form>
+                    <div class="row" id="mensaje_solicitud">
+
+                    </div>
+
+                  </div>
+
+
+
+                </div>
+              </div>
+              </div>
+              <div class="desc2 animate-box">
+                <div class="col-sm-7 col-sm-push-1 col-md-7 col-md-push-1">
+                  <p>!Nuestra aplicación <a href="#" target="_blank" class="fh5co-site-name">Taxiya app!</a></p>
+                  <h2>Solicita tu taxi</h2>
+                  <h3>Diligencia el formulario para pedir tu taxi.</h3>
+
+                  <!-- <p><a class="btn btn-primary btn-lg" href="#">Get Started</a></p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end service taxi online-->
   <!-- Start Service area -->
   <br>
   <br>
@@ -767,8 +874,7 @@
           <h3 style="color: #fff;">Jhon Gomez</h3>
           <h4 style="color: #fff;">Ceo &amp; Founder</h4>
           <p style="color: #fff;">
-            <img src="img/testimonials/quote-sign-left.png" class="quote-sign-left" alt="">
-            Estoy sumamente contento con el administrador de vales de taxisya, puedo controlar el gasto de mi compañia.
+            <img src="img/testimonials/quote-sign-left.png" class="quote-sign-left" alt=""> Estoy sumamente contento con el administrador de vales de taxisya, puedo controlar el gasto de mi compañia.
             <img src="img/testimonials/quote-sign-right.png" class="quote-sign-right" alt="">
           </p>
         </div>
@@ -778,8 +884,8 @@
           <h3 style="color: #fff;">Edgar Avila</h3>
           <h4 style="color: #fff;">Empresario</h4>
           <p style="color: #fff;">
-            <img src="img/testimonials/quote-sign-left.png" class="quote-sign-left" alt="">
-            He llegado a un acuerdo con taxisya para que trasporte a mis colegas que viene a la ciudad a hacer negocios y todos me sean llevado una gran experiencia de los taxis de la ciudad.
+            <img src="img/testimonials/quote-sign-left.png" class="quote-sign-left" alt=""> He llegado a un acuerdo con taxisya para que trasporte a mis colegas que viene a la ciudad a hacer negocios y todos me sean llevado una gran experiencia de los
+            taxis de la ciudad.
             <img src="img/testimonials/quote-sign-right.png" class="quote-sign-right" alt="">
           </p>
         </div>
@@ -789,8 +895,7 @@
           <h3 style="color: #fff;">Juan Carlos Castellanos</h3>
           <h4 style="color: #fff;">Corredor de bolsa</h4>
           <p style="color: #fff;">
-            <img src="img/testimonials/quote-sign-left.png" class="quote-sign-left" alt="">
-            Cuando tengo pico y placa no dudo en pedir mi taxi por Taxis Ya.
+            <img src="img/testimonials/quote-sign-left.png" class="quote-sign-left" alt=""> Cuando tengo pico y placa no dudo en pedir mi taxi por Taxis Ya.
             <img src="img/testimonials/quote-sign-right.png" class="quote-sign-right" alt="">
           </p>
         </div>
@@ -800,19 +905,17 @@
           <h3 style="color: #fff;">Brandon Gonzalez</h3>
           <h4 style="color: #fff;">Estudiante</h4>
           <p style="color: #fff;">
-            <img src="img/testimonials/quote-sign-left.png" class="quote-sign-left" alt="">
-            Cuando debo llevar mis maquetas a la universidad pido un taxi y llego sin lios.
+            <img src="img/testimonials/quote-sign-left.png" class="quote-sign-left" alt=""> Cuando debo llevar mis maquetas a la universidad pido un taxi y llego sin lios.
             <img src="img/testimonials/quote-sign-right.png" class="quote-sign-right" alt="">
           </p>
         </div>
 
         <div class="testimonial-item">
           <img src="img/testimonials/testimonio5.jpg" class="testimonial-img" alt="">
-          <h3 style="color: #fff;">Sara Wilsson</h3>
+          <h3 style="color: #fff;">Sara Sanchez</h3>
           <h4 style="color: #fff;">Estudiante</h4>
           <p style="color: #fff;">
-            <img src="img/testimonials/quote-sign-left.png" class="quote-sign-left" alt="">
-            Cada vez que me salgo a fista con mis amigos uso la app de taxisya para el regreso a casa.
+            <img src="img/testimonials/quote-sign-left.png" class="quote-sign-left" alt=""> Cada vez que me salgo a fista con mis amigos uso la app de taxisya para el regreso a casa.
             <img src="img/testimonials/quote-sign-right.png" class="quote-sign-right" alt="">
           </p>
         </div>
@@ -993,82 +1096,6 @@
     </div>
   </div>
   <!-- End Contact Area -->
-  <!--service taxi online-->
-  <div class="fh5co-hero">
-    <div class="fh5co-overlay"></div>
-    <div class="fh5co-cover" data-stellar-background-ratio="0.5" style="background-image: url(img/cover_bg_1.jpg);">
-      <div class="desc">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-5 col-md-5">
-              <div class="tabulation animate-box">
-
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
-                  <li role="presentation" class="active">
-                    <a href="#flights" aria-controls="flights" role="tab" data-toggle="tab"><i class="fa fa-cab"></i> Servicio de taxi</a>
-                  </li>
-                </ul>
-
-                <!-- Tab panes -->
-                <div class="tab-content">
-                  <div role="tabpanel" class="tab-pane active" id="flights">
-                    <div class="row">
-                      <form class="form-class" action="index.html" method="post">
-                        <div class="col-xxs-12 col-xs-6 mt">
-                          <div class="input-field">
-                            <label for="from">Nombre:</label>
-                            <input type="text" class="form-control" id="from-place" placeholder="Pedro" />
-                          </div>
-                        </div>
-                        <div class="col-xxs-12 col-xs-6 mt">
-                          <div class="input-field">
-                            <label for="from">Apellido:</label>
-                            <input type="text" class="form-control" id="to-place" placeholder="Perez" />
-                          </div>
-                        </div>
-                        <div class="col-xxs-12 col-xs-6 mt alternate">
-                          <div class="input-field">
-                            <label for="date-start">Origen</label>
-                            <input type="text" class="form-control" id="date-start" placeholder="Calle 1C bis #18-34" />
-                          </div>
-                        </div>
-                        <div class="col-xxs-12 col-xs-6 mt alternate">
-                          <div class="input-field">
-                            <label for="date-end">Destino</label>
-                            <input type="text" class="form-control" id="date-end" placeholder="Aeropuerto" />
-                          </div>
-                        </div>
-
-                        <div class="col-xs-12">
-                          <input type="submit" class="btn btn-primary btn-block" value="Solicitar taxi">
-                        </div>
-                      </div>
-                      </form>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </div>
-            <div class="desc2 animate-box">
-              <div class="col-sm-7 col-sm-push-1 col-md-7 col-md-push-1">
-                <p>!Nuestra aplicación <a href="#" target="_blank" class="fh5co-site-name">Taxiya app!</a></p>
-                <h2>Solicita tu taxi</h2>
-                <h3>Diligencia el fromulario para pedir tu taxi.</h3>
-
-                <!-- <p><a class="btn btn-primary btn-lg" href="#">Get Started</a></p> -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-  <!--end service taxi online-->
-
   <!-- Start Footer bottom Area -->
   <footer>
     <div class="footer-area">
@@ -1155,18 +1182,40 @@
   </footer>
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#btn-enviar-solicitud').click(function(e) {
+
+
+        var name = $('#nombre').val();
+        var surname = $('#apellido').val();
+        var correo = $('#email').val();
+        var tel = $('#telefono').val();
+        var direccion = $('#dir').val();
+        var num_dire = $('#num_dir').val();
+        var dataArray = {nombre: name, apellido: surname, email: correo, dir: direccion, num_dir:num_dire };
+
+        $.post("http://localhost/nuevoCms/webservices/create_service_page_web.php", dataArray, function(datos){
+            $("#mensaje_solicitud").html(datos);
+        })
+
+
+
+      });
+    });
+  </script>
 
   <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/jquery/jquery-migrate-1.4.1.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/bootstrap/css/bootstrap.min.css"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/venobox/venobox.min.js"></script>
   <script src="lib/knob/jquery.knob.js"></script>
   <script src="lib/wow/wow.min.js"></script>
   <script src="lib/parallax/parallax.js"></script>
   <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
+  <script src="lib/nivo-slider/js/jquery.nivo.slider.js"></script>
   <script src="lib/appear/jquery.appear.js"></script>
   <script src="lib/isotope/isotope.pkgd.min.js"></script>
   <script src="lib/superfish/hoverIntent.js"></script>
