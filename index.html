@@ -756,7 +756,7 @@
                 <div class="team-social-icon text-center">
                   <ul>
                     <li>
-                      <a href="http://bit.ly/2kWqbIN" style="margin-left: 46px;">
+                      <a href="https://play.google.com/store/apps/details?id=co.taxisya.conductor" style="margin-left: 46px;">
 													<i class="fa fa-android"></i>
 												</a>
                     </li>
@@ -801,7 +801,7 @@
           <div class="col-md-3 col-sm-3 col-xs-12">
             <div class="single-team-member">
               <div class="team-img">
-                <a href="#">
+                <a href="https://play.google.com/store/apps/details?id=co.taxisya.conductor.taxi">
 										<img src="img/team/app_pasajero.jpg" alt="">
 									</a>
                 <div class="team-social-icon text-center">
@@ -1238,7 +1238,7 @@
 
         var dataArray = {nombre: name, apellido: surname, email: correo, telefono: tel, dir: direccion, num_dir: num_dire };
 
-        $.post("http://localhost/nuevoCms/webservices/create_service_page_web.php", dataArray, function(datos){
+        $.post("controllers/create_service_page_web.php", dataArray, function(datos){
             $("#mensaje_solicitud").html(datos);
         });
 
